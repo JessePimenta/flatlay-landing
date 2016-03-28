@@ -106,8 +106,37 @@ p {
 .notP {
   font-size: normal;
   word-spacing: normal;
-  margin: 0 0 0px !important;
+  /*border: 2px solid white;*/
+  border-radius: 10%;
+  /* margin: 0 0 0px !important; */
+  padding: 10px;
 }
+.notPSignUp {
+  font-size: normal;
+  word-spacing: normal;
+  border: 2px solid white;
+  border-radius: 10%;
+  /* margin: 0 0 0px !important; */
+  padding: 10px;
+}
+.notPSignUp:hover {
+  font-size: normal;
+  word-spacing: normal;
+  border: 2px solid white;
+  border-radius: 10%;
+  /* margin: 0 0 0px !important; */
+  padding: 10px;
+  background: black;
+  opacity: .8;
+  transition: .5s;
+}
+
+p.notP:hover {
+    /* background: black; */
+    opacity: .8;
+    transition: .5s;
+}
+
 p:not(.stats) {
   word-spacing: normal;
 }
@@ -115,19 +144,19 @@ p:not(.stats) {
   visibility: hidden;
 }
 body {
-  font-family: 'Helvetica Neue';
+  font-family: "Montserrat", sans-serif !important;
 }
 
 #slider1_container {
-visibility: visible;
-position: relative;
-margin-right: auto;
-margin-bottom: 0px;
-margin-left: auto;
-width: 875px;
-height: 339.254px;
-overflow: hidden;
-margin-top: 130px;
+  visibility: visible;
+  position: relative;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  width: 875px;
+  height: 339.254px;
+  overflow: hidden;
+  margin-top: 0;
 }
 #id0 {
   overflow: scroll;
@@ -137,8 +166,8 @@ margin-top: 130px;
   /*word-spacing: 2px;*/
 }
 .logo {
-  padding-bottom: 20px;
-  /*margin-top: -10px;*/
+  padding-bottom: 10px;
+  /* margin-top: -10px; */
 }
 
 .links {
@@ -298,7 +327,7 @@ input:focus ~ label, input:valid ~ label 		{
   width:0;
   bottom:1px;
   position:absolute;
-  background:#5264AE;
+  background: #3dbdbf;
   transition:0.2s ease all;
   -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
@@ -352,27 +381,60 @@ ul{
   display: inline-block;
   vertical-align: middle;
   margin: 0;
-  padding: 0;
+  /* padding: 10px; */
+  /* margin-right: 20px !important; */
 }
 li{
   display: inline-block;
 }
 
 .shadowLink {
-  box-shadow: 7px -2px 7px -4px;
+  /* box-shadow: 7px -2px 7px -4px; */
 }
 
 
 .logo{
   font-size: 30px;
   vertical-align: middle;
-  margin: -8px 450px;
+  overflow: hidden;
+  margin: 200px 150px;
+  z-index: 1030;
+  position: absolute;
 }
 
-@media (max-width: 1205px){
+h2.featurette-heading.whatIsFlatlay {
+    margin-top: 40px;
+}
+
+@media (max-width: 1024px){
     .logo {
-      margin: -10px 30px;
+      margin: -17px;
+      height: 60px;
+      width:250px;
     }
+
+    ul{
+      list-style: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+       padding: 10px;
+       margin-right: 20px !important;
+    }
+}
+@media (max-width: 768px){
+    .navbar-inverse .navbar-nav>li>a {
+      margin: -10px 30px;
+      height: 65px;
+      width:250px;
+      height:40px;
+    }
+    .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 0px 64px;
+    text-align: center;
+  }
 }
 
 .hashtags {
@@ -384,18 +446,49 @@ li{
 
 }
 
-.fitness {
-display: none;
- }
-.home {
-display: none !important;
+/*.flatVideo {
+margin-top: 700px;
+}*/
+
+header {
+	height: 90%;
+	position: relative;
+	background-color: red;
 }
-.photography {
-  display: none !important;
- }
-.fashion {
-  display: none !important;
- }
-.beauty{
-  display: none !important;
+
+.hero_area{
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: absolute;
+	overflow: hidden;
+}
+
+audio, canvas, video{
+	display: inline-block;
+}
+
+.hero_area video{
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	height: auto;
+}
+
+
+.videoFlatlay {
+position: inherit !important;
+}
+
+.opaqueLayer {
+opacity: .7;
+background-color: black;
+}
+.col-md-5.signUpHere {
+    margin-top: 75px;
+}
+
+h2.featurette-heading.whatIsFlatlay {
+    margin-top: 50px;
 }
