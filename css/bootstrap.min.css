@@ -19,6 +19,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
   padding: 10px;
 }
+
+
 audio, canvas, progress, video {
   display: inline-block;
   vertical-align: baseline
@@ -981,10 +983,28 @@ p {
   font-weight: 300;
   line-height: 1.4
 }
+.leadCenter {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
+}
 @media (min-width:768px) {
   .lead {
-    font-size: 21px
+    font-size: 21px;
   }
+  .leadCenter {
+    font-size: 21px;
+  }
+
+}
+@media (max-width:768px) {
+  .lead {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
 
 }
 small, .small {
@@ -1231,8 +1251,8 @@ pre code {
   overflow-y: scroll
 }
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  /*padding-right: 15px;
+  padding-left: 15px;*/
   margin-right: auto;
   margin-left: auto
 }
@@ -1258,7 +1278,7 @@ pre code {
   margin-left: auto
 }
 .row {
-  margin-right: -15px;
+  /*margin-right: -15px;*/
   margin-left: -15px
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
@@ -2244,25 +2264,25 @@ textarea.input-lg, textarea.form-group-lg .form-control, select[multiple].input-
   line-height: 30px
 }
 .has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label {
-  color: #3c763d
+  color: #3DBDBF
 }
 .has-success .form-control {
-  border-color: #3c763d;
+  border-color: #3DBDBF;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
 }
 .has-success .form-control:focus {
-  border-color: #2b542c;
+  border-color: #3DBDBF;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168
 }
 .has-success .input-group-addon {
-  color: #3c763d;
+  color: #3DBDBF;
   background-color: #dff0d8;
-  border-color: #3c763d
+  border-color: #3DBDBF
 }
 .has-success .form-control-feedback {
-  color: #3c763d
+  color: #3DBDBF
 }
 .has-warning .help-block, .has-warning .control-label, .has-warning .radio, .has-warning .checkbox, .has-warning .radio-inline, .has-warning .checkbox-inline, .has-warning.radio label, .has-warning.checkbox label, .has-warning.radio-inline label, .has-warning.checkbox-inline label {
   color: #8a6d3b
@@ -2489,6 +2509,7 @@ textarea.input-lg, textarea.form-group-lg .form-control, select[multiple].input-
   background-color: #3DBDBF;
   border-color: #3DBDBF;
   font-size: 21px;
+  margin-top:10px;
 }
 .btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success {
   color: #fff;
@@ -3233,6 +3254,14 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
   }
   .logo {
     margin-top: -10px;
+  }
+}
+@media (max-width:768px) {
+  .navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: none;
   }
 }
 @media (min-width:768px) {

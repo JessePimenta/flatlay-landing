@@ -145,6 +145,7 @@ p:not(.stats) {
 }
 body {
   font-family: "Montserrat", sans-serif !important;
+  font-weight: lighter !important;
 }
 
 #slider1_container {
@@ -320,7 +321,7 @@ input:focus ~ label, input:valid ~ label 		{
 }
 
 /* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:300px; }
+.bar 	{ position:relative; display:block; width:457px; }
 .bar:before, .bar:after 	{
   content:'';
   height:2px;
@@ -397,9 +398,10 @@ li{
   font-size: 30px;
   vertical-align: middle;
   overflow: hidden;
-  margin: 200px 150px;
+  margin: 240px 150px;
   z-index: 1030;
   position: absolute;
+  opacity: 1 !important;
 }
 
 h2.featurette-heading.whatIsFlatlay {
@@ -407,11 +409,11 @@ h2.featurette-heading.whatIsFlatlay {
 }
 
 @media (max-width: 1024px){
-    .logo {
+    /*.logo {
       margin: -17px;
       height: 60px;
       width:250px;
-    }
+    }*/
 
     ul{
       list-style: none;
@@ -421,6 +423,35 @@ h2.featurette-heading.whatIsFlatlay {
        padding: 10px;
        margin-right: 20px !important;
     }
+}
+
+@media (max-width: 981px) {
+  .logo {
+      font-size: 30px;
+      vertical-align: middle;
+      overflow: hidden;
+      margin: 240px 0px;
+      z-index: 1030;
+      position: absolute;
+      opacity: 1 !important;
+  }
+}
+
+@media (max-width: 859px) {
+.logo {
+    margin: 0;
+    height: 40px;
+    width: 250px;
+    margin-left: -60px;
+  }
+}
+@media (max-width: 800px) {
+.logo {
+    margin: 0;
+    height: 40px;
+    width: 250px;
+    margin-left: -40px;
+  }
 }
 @media (max-width: 768px){
     .navbar-inverse .navbar-nav>li>a {
@@ -435,6 +466,19 @@ h2.featurette-heading.whatIsFlatlay {
     padding: 0px 64px;
     text-align: center;
   }
+
+  .logo {
+      margin: -4px;
+      height: 40px;
+      width: 250px;
+      margin-left: -30px;
+    }
+
+    .videoFlatlay {
+    position: inherit !important;
+    width: 100%;
+    height: 350px;
+  }
 }
 
 .hashtags {
@@ -442,9 +486,6 @@ h2.featurette-heading.whatIsFlatlay {
     margin-bottom: -20px;
 }
 
-.defaultHash {
-
-}
 
 /*.flatVideo {
 margin-top: 700px;
@@ -479,6 +520,13 @@ audio, canvas, video{
 
 .videoFlatlay {
 position: inherit !important;
+width: 100%;
+height: 350px !important;
+}
+.videoFlatlayMobile {
+position: inherit !important;
+width: 100%;
+height: inherit !important;
 }
 
 .opaqueLayer {
@@ -487,8 +535,246 @@ background-color: black;
 }
 .col-md-5.signUpHere {
     margin-top: 75px;
+    padding-left: 40px;
 }
+
 
 h2.featurette-heading.whatIsFlatlay {
     margin-top: 50px;
+}
+
+.comingSoon {
+  background-image: url('/img/music.jpg');
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+}
+
+
+.blackDiv {
+background: black;
+opacity: .2;
+z-index: 1
+}
+
+
+
+.blogsection {
+  background-image: url('/img/opaque_101.png');
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*-webkit-filter: blur(5px)*/
+  background-position-y: -370px;
+  margin: auto;
+}
+
+
+
+/*EMAIL FORM STYLE*/
+
+.form {
+  width: 400px;
+  margin:auto;
+  background: white;
+  border-radius: 3px;
+  margin-top: 2em;
+  /*margin-bottom: 6em;*/
+  /*padding: 1.25em;*/
+  color: black;
+}
+
+h3:not(.IGusername) {
+  font-size: 1.98em;
+  /* margin-bottom: 0.8em; */
+  margin-top: 0.4em;
+  font-weight: 100;
+  /*text-align: center;*/
+  padding-bottom: 20px;
+}
+
+.btn-primary {
+  box-shadow: 0;
+  border: none;
+  background-color: #3DBDBF;
+  border-color: #3DBDBF;
+  color: #ffffff;
+  outline: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  transition: all .5s;
+  padding: 10px 19px;
+  font-size: 17px;
+  line-height: 1.471;
+  width: 30%;
+  border-radius: 3px;
+  text-transform: uppercase;
+  margin: auto;
+  margin-top: 1.44em;
+  margin-bottom: .55em;
+  display: inherit;
+}
+
+.btn-primary:hover {
+  background-color: #1ABC9C;
+}
+
+.form-group {
+  position: relative;
+  opacity: 1;
+  transition: .6s;
+}
+
+.input-field-icon {
+  color: #bfc9ca;
+  font-size: 18px;
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+  transition: .6s;
+}
+
+.form-control {
+  transition: opacity .6s;
+  opacity: 1;
+  border: 0;
+  /*border-bottom: 2px solid #bdc3c7;*/
+  border-radius: 0;
+  background: white;
+  font-size: 15px;
+  line-height: 1.467;
+  padding: 4px;
+  height: 42px;
+  -webkit-appearance: none;
+}
+
+input, textarea {
+  transition: all 800ms;
+  font-family: "Roboto";
+  resize: none;  /* removes the resize handle */
+  overflow: auto; /* removes default scrolling bars in IE */
+  outline:none;
+  font-family:inherit;
+  box-sizing:border-box;
+  width: 100%;
+  padding: 0px 4px;
+  color: black;
+  margin-top: 1.25em;
+}
+
+.handle {
+      text-align: center;
+      font-size: smaller;
+      /*margin: 15px;*/
+}
+
+#appIcon {
+  height: 64px;
+  width: 64px;
+}
+
+.howToExample {
+  margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+.mission {
+  font-weight: 700;
+}
+
+.title {
+font-size: xx-large;
+font-weight: 700;
+}
+.title5 {
+  padding-top: 40px;
+font-size: xx-large;
+font-weight: 700;
+}
+.tip {
+  color: #3dbdbf;
+  font-size: large;
+}
+
+.has-error input, .has-error textarea {
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.has-error .input-field-icon {
+  color: #e74c3c;
+}
+
+.has-success input, .has-success textarea {
+  color: #3DBDBF;
+  border-color: #3DBDBF;
+}
+
+.has-success .input-field-icon {
+  color: #3DBDBF;
+}
+
+
+input:focus, textarea:focus {
+  border-color: #3DBDBF;
+  color: #34495e;
+}
+
+input:focus + .input-field-icon {
+  color: #34495e;
+}
+
+textarea.form-control {
+  height: 120px;
+  transition: .6s;
+}
+
+textarea.form-control:focus {
+  height: 200px;
+  border-color: #3DBDBF;
+}
+
+.social {
+  display: block;
+  margin: auto;
+  width: 250px;
+}
+
+.social li {
+  display: inline-block;
+  list-style: none;
+  margin: auto;
+  margin-right: 10px;
+}
+
+.social li a {
+  display:block;
+  text-decoration: none;
+  color: #999;
+  border: 2px solid #999;
+  border-radius: 100%;
+  font-size: 26px;
+  width: 34px;
+  padding: 3px;
+  text-align: center;
+  transition: all .4s;
+}
+
+.social li a:hover {
+  background: #999;
+  color: white;
+}
+
+.social li a span {
+  margin-top: 4px;
+  text-align: center;
+}
+
+
+@media (max-width: 600px) {
+  .form {
+    width: 90%;
+    margin-top: 12%;
+  }
 }

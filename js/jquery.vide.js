@@ -38,11 +38,11 @@
     muted: true,
     loop: true,
     autoplay: true,
-    position: '50% 50%',
-    posterType: 'detect',
+    position: '100% 100%',
+    posterType: 'png',
     resizing: true,
     bgColor: 'transparent',
-    className: 'opaqueLayer'
+    className: ''
   };
 
   /**
@@ -240,6 +240,7 @@
     var $video;
     var $wrapper;
 
+
     // Set styles of a video wrapper
     $wrapper = vide.$wrapper = $('<div>')
       .addClass(settings.className)
@@ -251,10 +252,10 @@
         bottom: 0,
         right: 0,
         overflow: 'hidden',
-        '-webkit-background-size': 'cover',
-        '-moz-background-size': 'cover',
-        '-o-background-size': 'cover',
-        'background-size': 'cover',
+        '-webkit-background-size': 'contain',
+        '-moz-background-size': 'contain',
+        '-o-background-size': 'contain',
+        'background-size': 'contain',
         'background-color': settings.bgColor,
         'background-repeat': 'no-repeat',
         'background-position': position.x + ' ' + position.y
