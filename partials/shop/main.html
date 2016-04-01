@@ -1,0 +1,37 @@
+
+            <!--List Product-->
+            <div id="cbp-vm" class="shop-prod" >
+			
+		
+	
+                        <ul id="product" class="nav-pills nav-stacked rectangle-list" infinite-scroll="fetchNext()"  infinite-scroll-distance="1" style=" height:100%">
+                            <li class="col-md-4 my-shop-animation" data-ng-repeat="product in data" >
+                                <div class="shop-img show-down">
+								<img  check-image ng-src="{{product.productimageurl || $parent.imageunavailable}}" >                                    
+                                </div>
+                                <span class="number-prodsingle-cart" ng-show="cart.getTotalCount(product.id) > 0">N&#176; {{cart.getTotalCount(product.id)}}</span>
+                                <!--Triangle Sale-->
+                                <span class="onsale-prod" ng-show='product.discount != null'>
+                                    <span>{{product.discount}}</span>
+                                </span>
+                                <!--End-->
+                                <div class="col-lg-12 col-md-12 bt12-detail-shop">
+                                    <div class="bt-detail-shop">
+                                        <a class="title" href=""> {{product.name}}  </a>
+                                        <p class="shop-price"> {{product.price | currency : "$"}} </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 bt-content-shop">
+                                    <a class="btn btn-lg btn-primary" href="" ng-click="cart.addItem(product.id, product.name, product.productimageurl, product.price, 1)">
+                                       <i class="fa fa-shopping-cart"></i> Add to Cart
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 bt-content-shop">
+                                    <a class="btn btn-lg btn-primary pull-right" href="#/products/{{product.id}}"><i class="fa fa-list"></i>Details</a>
+                                </div>
+                                <div class="clear"></div>
+                          </li> 
+                      </ul>  
+               
+			   </div>
+   

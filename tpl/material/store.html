@@ -1,0 +1,87 @@
+
+    <div ng-controller="store">
+<style type="text/css">
+
+
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.box    {  
+  box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+  border-bottom:2px solid #fff;
+  border-right:2px solid #fff;
+  margin:5% auto 0 auto; 
+  border-radius:5px;
+  overflow:hidden;
+  position: relative;
+}
+
+.box img {
+  display: block;
+}
+
+.overlay    {
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,.75);
+  text-align:center;
+  opacity:0;
+  -webkit-transition: opacity 1s ease;
+}
+
+.box:hover .overlay {
+  opacity:1;
+}
+
+.overlay .plus:before { 
+  content:&quot;+&quot;;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top:50%;
+  left:50%;
+  font-family:Helvetica;
+  font-weight:1900;
+  color:rgba(0,0,0,0);
+  font-size:6rem;
+  -webkit-transform:translate(-50%, -50%);
+  transform:translate(-50%, -50%);
+}
+
+
+.overlay.clicked .plus:before {
+  content:&quot;-&quot;;
+}
+</style>
+
+<div ui-scroll-viewport class="row" style="height:150vh; overflow: auto !important;" > 
+		 <div ui-scroll="model in datasource" class="col-sm-4">
+            <div class="panel panel-card wrapper-md">
+              <a id="link-3" ng-href="{{model.affiliateurl}}" target="_blank">
+                <div class="item">
+                  <div class="box">
+                    <img check-image ng-src="{{model.productimageurl || $parent.imageunavailable}}" class="w-full r-t" alt="" />
+                    <div class="overlay">
+                    <h3>{{model.productname}}</h3>{{model.longproductdesc}}</div>
+                  </div>
+                  <button md-ink-ripple=""
+                  class="md-btn md-fab md-raised bg-white m-r md-fab-offset pull-right">${{model.price}}</button>
+                  <div class="bottom text-white wrapper">
+                    <!--   Title -->
+                  </div>
+                </div>
+               
+              </a>
+            </div>
+          </div>
+        </div>
+    
+  </div>
+ 
+

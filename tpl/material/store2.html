@@ -1,0 +1,143 @@
+<div class="shop-slide-img_sound">
+  <div class="effect-over"></div>
+    <div class="container">
+      <div class="col-lg-12">
+       <!--<div class="about-content-icon"><span class="icon-browser"></span></div>-->
+       <h1 class="shopping-topsub-title">The Rewards Card For The <p> <span class="color-txt">Social Generation™</span></h1>
+       <!-- <h1 class="shopping-top-title">UP TO <span class="color-txt">50%</span> OFF</h1>-->
+      </div>
+    </div> 
+</div>
+<div class="breadcrumb-color meet-team">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+             
+					<div class="col-lg-12">
+					<div class="content-store" ng-controller="searchcomp">
+					<!--Filter Animation Product-->
+					<div class="group filter-button-top">
+					<form >
+
+					<input type="text" ng-model="query" ng-keyup="$event.keyCode == 13 && search('name')"  placeholder="Search">
+					</form> 
+					</ul> 
+					</div>
+					
+					</div>
+					</div>
+		
+            </div>
+        </div>
+      </div>
+</div>
+
+<div class="container" ng-controller="AdminController">
+
+    <!-- Top Images Shop -->
+    
+    <div class="row">
+	
+	<div class="col-lg-12 text-center shop-title-store">
+                <h1 class="section-title">FEATURED <span>Members</span></h1>
+           
+        </div>
+		
+        <div class="container">
+    <div class="row content-chose-dress">
+            <div class="col-md-12">
+			 
+			 <data-owl-carousel class="owl-carousel" data-options="{navigation: false, pagination: true, rewindNav : false}">
+      <div owl-carousel-item="" ng-repeat="item in featureduser" class="item">
+			<img  ui-sref="app.shop.user({ id: item.item_name })" check-image ng-src="{{item.profile_pic||$parent.imageunavailable}}" height="100" width="100" class="img-circle" alt=""> 
+			<p class="ng-binding">{{item.item_name}}</p>
+			<a class="subtitle ng-binding" href="">{{item.item_description}}</a>
+      </div>
+    </data-owl-carousel>
+			
+				
+				
+				
+            </div>
+    </div>
+</div>
+
+
+
+             <div class="col-lg-12">
+          <div class="content-store" ng-controller="searchcomp">
+                <!--Filter Animation Product-->
+                <div class="group filter-button-top">
+			        <ul class="filter group albumFilter"> 
+				        <li ng-click="gotomain('name')" class="active">ALL</li> 
+				        <li ng-click="gotobrands('name')" >Brands</li> 
+				        <li ng-click="gotostores('name')" >Stores</li> 
+				        <li ng-click="gotousers('name')" >Users</li> 
+			        </ul> 
+	            </div>
+                 <form >
+          
+                           <input type="text" ng-model="query" ng-keyup="$event.keyCode == 13 && search('name')" class="search-query" placeholder="Search">
+                        </form>
+                </div>
+        </div>
+        
+    	
+   </div>
+<div  ui-view ></div>
+    <!-- Our Customers 
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h2 class="page-header">Our Clients</h2>
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive img-customer" src="images/clients/barkley.jpg">
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive img-customer" src="images/clients/guzzy.jpg">
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive img-customer" src="images/clients/actived.jpg">
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive img-customer" src="images/clients/idca.jpg">
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive img-customer" src="images/clients/bullos.jpg">
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive img-customer" src="images/clients/violago.jpg">
+        </div>
+
+    </div>
+-->
+
+
+</div>
+<!-- /.container -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('.skillbar').each(function () {
+            jQuery(this).find('.skillbar-bar').animate({
+                width: jQuery(this).attr('data-percent')
+            }, 1400);
+        });
+    });
+</script>
+
+<!-- Filter Images-->
+<script type="text/javascript">
+    $('.filter li').on('click', function () {
+        $('li').removeClass('active');
+        $(this).addClass('active');
+    });
+</script>
