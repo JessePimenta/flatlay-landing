@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<rss version="2.0">
+  <channel>
+    <title>Flatlay</title>
+    <link>http://theflatlay.com</link>
+    <description />
+    <item>
+      <guid>http://theflatlay.com/</guid>
+      <title>Flatlay</title>
+      <link>http://theflatlay.com/</link>
+      <description />
+    </item>
+    <item>
+      <guid>http://theflatlay.com/coming-soon</guid>
+      <title>Flatlay</title>
+      <link>http://theflatlay.com/coming-soon</link>
+      <description />
+    </item>
+    <item>
+      <guid>http://theflatlay.com/101</guid>
+      <title>The Four Fundamentals of a Flat Lay</title>
+      <link>http://theflatlay.com/101</link>
+      <description />
+    </item>
+    <item>
+      <guid>http://theflatlay.com/featured</guid>
+      <title>Curators of the Week</title>
+      <link>http://theflatlay.com/featured</link>
+      <description />
+    </item>
+  </channel>
+</rss>
+<!--<guid value="8afd8bb9-5fb1-42b2-884f-37a9f96677d7" />-->
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
